@@ -8,10 +8,9 @@ export async function getDataApi() {
 
 export async function submitDataApi(data) {
 	const res=await axios.post('/postStudent',data)
-	console.log('this is response',res)
+	console.log('this is from submitDataApi',res)
 }
 
 export async function loginDataApi(data) {
 	const res=await axios.post('/loginStudent',data)
-	console.log('this is response',res)
-}
+	console.log('this is from submitDataApi',res)
