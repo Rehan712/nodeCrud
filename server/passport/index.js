@@ -23,10 +23,10 @@
 // 	passport.use(strategy);
 // }
 
-const passport=require('passport');
-const {Strategy}=require('passport-jwt')
+var passport=require('passport');
+var {Strategy}=require('passport-jwt')
 
-const users=[
+var users=[
 	{
 		name:'rehan',
 		password:'rehan007'
@@ -34,8 +34,9 @@ const users=[
 ]
 
 module.exports=()=>{
-	const strategy=new Strategy((jwt_payload,next)=>{
-		const user=users.filter(item=>{
+	var strategy=new Strategy(require('./jwtOptions'),(jwt_payload,next)=>{
+		console.log('this is payload from passport strategy',jwt_payload)
+		var user=users.filter(item=>{
 			return item.name === jwt_payload.name
 		})[0];
 		if(user){

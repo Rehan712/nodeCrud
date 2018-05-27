@@ -18,5 +18,5 @@ function* watchLoginData() {
 }
 
 export default function* rootSaga() {
-	yield all([fork(watchGetData),fork(watchSubmitData),fork(watchLoginData)])
+	yield all([fork(watchGetData),fork(watchLoginData),fork(watchSubmitData)])
 }

@@ -33,7 +33,7 @@ module.exports=(req,res)=>{
 		if (user) {
 			const payload={name:user.name};
 			const token=jwt.sign(payload,jwtOptions.secretOrKey,{
-				expiresIn:60 * 5
+				expiresIn:60 * 60
 			})
 			res.status(201).send({name:user.name,token})
 		}else{

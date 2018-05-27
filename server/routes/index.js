@@ -1,7 +1,9 @@
 module.exports=app=>{
 
 	// api routes
-	app.get('/studentData',require('passport').authenticate('jwt',{session:false}),require('../handlers/getDataHandler'));
+	app.get('/studentData',
+		// require('passport').authenticate('jwt',{session:false}),
+		require('../handlers/getDataHandler'));
 	app.post('/loginStudent',require('../handlers/loginStudentHandler'));
 	app.post('/postStudent',require('../handlers/postStudentHandler'));
 

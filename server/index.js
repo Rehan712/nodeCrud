@@ -4,7 +4,11 @@ const app=express();
 
 require('./middleware')(app);
 
+require('./passport')();
+
 require('./routes')(app);
+
+
 
 require('mongoose').
 	connect('mongodb://rehan007:rehan6300487@ds233320.mlab.com:33320/school')

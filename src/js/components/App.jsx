@@ -1,21 +1,31 @@
 import React from 'react';
-import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
+import {Switch,Route,Link} from 'react-router-dom';
 
 import Home from './Home';
 import Data from './Data';
 import SignIn from './SignIn';
-import Login from './Login'
+import Login from './Login';
+
+import {isTokenValid} from '../utils'
 
 class App extends React.Component{
 	render(){
 		return (
-			<Router>
 			<div className="app">
 				<div className="menu">
 					<Link to="/" style={{marginLeft:50, textDecoration:'none'}}>Home</Link>
+					{
+						isTokenValid() ?
+						(
+							
+							<Link to="/data" style={{marginLeft:50, textDecoration:'none'}}>Data</Link>
+						):''
+						
+					}
 					<Link to="/siginIn" style={{marginLeft:50,textDecoration:'none'}}>SignIn</Link>
+					
 					<Link to="/login" style={{marginLeft:50, textDecoration:'none'}}>Login</Link>
-					<Link to="/data" style={{marginLeft:50, textDecoration:'none'}}>Data</Link>
+					
 				</div> 
 
 				<Switch>
@@ -26,7 +36,6 @@ class App extends React.Component{
 
 				</Switch>
 			</div>
-			</Router>
 		)
 	}
 }
