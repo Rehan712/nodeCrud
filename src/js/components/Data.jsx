@@ -1,24 +1,32 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-class Data extends React.Component{
-	componentDidMount(){
-		this.props.getData()
+class Data extends React.Component {
+	componentDidMount() {
+		this.props.getData();
 	}
 
-	render(){
-		console.log('this is the data',this.props.data)
+	render() {
+		const { data, signOutData } = this.props;
+		console.log('this is the data', this.props.data);
 		return (
-			<div> This is the Data component</div>
-		)
+			<div>
+				<div className="button">
+					<button onClick={signOutData}>Sign out</button>
+				</div>
+			</div>
+		);
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-		data:state.data
-	}
+		data: state.data
+	};
 }
 
-export default connect(mapStateToProps,{getData:actions.getData})(Data)
+export default connect(mapStateToProps, {
+	getData: actions.getData,
+	signOutData: actions.signOutData
+})(Data);

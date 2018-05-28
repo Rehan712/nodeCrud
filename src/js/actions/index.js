@@ -1,31 +1,29 @@
 import * as types from '../constants';
 
-
-// Actions for geting data 
+// Actions for geting data
 
 export function getData() {
 	return {
-		type:types.GET_DATA
-	}
+		type: types.GET_DATA
+	};
 }
 export function getDataAttempt() {
 	return {
-		type:types.GET_DATA_ATTEMPT
-	}
+		type: types.GET_DATA_ATTEMPT
+	};
 }
 export function getDataSuccess(data) {
 	return {
-		type:types.GET_DATA_SUCCESS,
-		payload:data
-	}
+		type: types.GET_DATA_SUCCESS,
+		payload: data
+	};
 }
 export function getDataFail(error) {
 	return {
-		type:types.GET_DATA_FAIL,
-		payload:error
-	}
+		type: types.GET_DATA_FAIL,
+		payload: error
+	};
 }
-
 
 // ##########_______________##########
 
@@ -33,25 +31,25 @@ export function getDataFail(error) {
 
 export function submitData(data) {
 	return {
-		type:types.SUBMIT_DATA,
-		payload:data
-	}
+		type: types.SUBMIT_DATA,
+		payload: data
+	};
 }
 export function submitDataAttempt() {
 	return {
-		type:types.SUBMIT_DATA_ATTEMPT
-	}
+		type: types.SUBMIT_DATA_ATTEMPT
+	};
 }
 export function submitDataSuccess() {
 	return {
-		type:types.SUBMIT_DATA_SUCCESS
-	}
+		type: types.SUBMIT_DATA_SUCCESS
+	};
 }
 export function submitDataFail(error) {
 	return {
-		type:types.SUBMIT_DATA_FAIL,
-		payload:error
-	}
+		type: types.SUBMIT_DATA_FAIL,
+		payload: error
+	};
 }
 
 // ########____________############
@@ -60,33 +58,33 @@ export function submitDataFail(error) {
 
 export function changeName(value) {
 	return {
-		type:types.CHANGE_NAME,
-		payload:value
-	}
+		type: types.CHANGE_NAME,
+		payload: value
+	};
 }
 export function changeFatherName(value) {
 	return {
-		type:types.CHANGE_FATHER_NAME,
-		payload:value
-	}
+		type: types.CHANGE_FATHER_NAME,
+		payload: value
+	};
 }
 export function changeAge(value) {
 	return {
-		type:types.CHANGE_AGE,
-		payload:value
-	}
+		type: types.CHANGE_AGE,
+		payload: value
+	};
 }
 export function changeAddress(value) {
 	return {
-		type:types.CHANGE_ADDRESS,
-		payload:value
-	}
+		type: types.CHANGE_ADDRESS,
+		payload: value
+	};
 }
 
 export function resetStateForm() {
 	return {
-		type:types.RESET_STATE_FORM
-	}
+		type: types.RESET_STATE_FORM
+	};
 }
 
 // ############_____________#############
@@ -95,25 +93,31 @@ export function resetStateForm() {
 
 export function loginData(data) {
 	return {
-		type:types.LOGIN_DATA,
-		payload:data
-	}
+		type: types.LOGIN_DATA,
+		payload: data
+	};
 }
 export function loginDataAttempt() {
 	return {
-		type:types.LOGIN_DATA_ATTEMPT
-	}
+		type: types.LOGIN_DATA_ATTEMPT
+	};
 }
 export function loginDataSuccess() {
 	return {
-		type:types.LOGIN_DATA_SUCCESS
-	}
+		type: types.LOGIN_DATA_SUCCESS
+	};
 }
 export function loginDataFail(error) {
 	return {
-		type:types.LOGIN_DATA_FAIL,
-		payload:error
-	}
+		type: types.LOGIN_DATA_FAIL,
+		payload: error
+	};
+}
+
+export function signOutData() {
+	return {
+		type: types.SIGN_OUT_DATA
+	};
 }
 
 // ############_________________#############
@@ -122,26 +126,19 @@ export function loginDataFail(error) {
 
 export function changeLoginName(value) {
 	return {
-		type:types.CHANGE_LOGIN_NAME,
-		payload:value
-	}
+		type: types.CHANGE_LOGIN_NAME,
+		payload: value
+	};
 }
 export function changeLoginPassword(value) {
 	return {
-		type:types.CHANGE_LOGIN_PASSWORD,
-		payload:value
-	}
+		type: types.CHANGE_LOGIN_PASSWORD,
+		payload: value
+	};
 }
 
 export function resetLoginState() {
 	return {
-		type:types.RESET_LOGIN_STATE
-	}
+		type: types.RESET_LOGIN_STATE
+	};
 }
-
-
-
-
-
-
-
